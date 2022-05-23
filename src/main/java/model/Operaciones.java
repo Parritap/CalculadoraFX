@@ -197,4 +197,7 @@ public class Operaciones {
     public static boolean isValidElement(String e) {
         return (e!= null && Pattern.matches("\\d*", e) || Pattern.matches("\\w*", e));
     }
+
+
+
 }

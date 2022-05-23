@@ -4,25 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0404100-be63-44b7-81cc-4016fa0c1671" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Conjunto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Operaciones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Universo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/calculadorafx/hello-view.fxml" afterDir="false" />
+    <list default="true" id="e0404100-be63-44b7-81cc-4016fa0c1671" name="Changes" comment="Primer commit -&gt; Lógica de operaciones y restricciones de conjuntos.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/SetNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/calculadorafx/calculadoraGUI.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/calculadorafx/myDemo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Operaciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Operaciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Universo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Universo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/calculadorafx/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/calculadorafx/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
         <option value="Class" />
       </list>
     </option>
@@ -48,26 +46,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Usuario/IdeaProjects/CalculadoraFX/src/main/java/model",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/IdeaProjects/CalculadoraFX/src/main/java/model&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Usuario\IdeaProjects\CalculadoraFX\src\main\java\model" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.calculadorafx" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.com.example.calculadorafx.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.calculadorafx.Main" />
+      <module name="CalculadoraFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.calculadorafx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.example.calculadorafx.HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.calculadorafx.HelloApplication" />
       <module name="CalculadoraFX" />
       <extension name="coverage">
@@ -80,12 +94,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="com.example.calculadorafx.MyDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.calculadorafx.MyDemo" />
+      <module name="CalculadoraFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.calculadorafx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="model.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.Main" />
+      <module name="CalculadoraFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.calculadorafx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="model.Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="model.Test" />
       <module name="CalculadoraFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="model.*" />
+          <option name="PATTERN" value="com.example.calculadorafx.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,8 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.com.example.calculadorafx.Main" />
+        <item itemvalue="Application.com.example.calculadorafx.HelloApplication" />
+        <item itemvalue="Application.model.Test" />
+        <item itemvalue="Application.model.Main" />
+        <item itemvalue="Application.com.example.calculadorafx.MyDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -110,8 +153,19 @@
       <updated>1653145453854</updated>
       <workItem from="1653145455068" duration="1415000" />
       <workItem from="1653152961517" duration="3742000" />
-      <workItem from="1653171538764" duration="10262000" />
+      <workItem from="1653171538764" duration="11507000" />
+      <workItem from="1653230061959" duration="3989000" />
+      <workItem from="1653244498697" duration="9493000" />
+      <workItem from="1653259744175" duration="4004000" />
     </task>
+    <task id="LOCAL-00001" summary="Primer commit -&gt; Lógica de operaciones y restricciones de conjuntos.">
+      <created>1653191681548</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653191681548</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,5 +181,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer commit -&gt; Lógica de operaciones y restricciones de conjuntos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer commit -&gt; Lógica de operaciones y restricciones de conjuntos." />
   </component>
 </project>

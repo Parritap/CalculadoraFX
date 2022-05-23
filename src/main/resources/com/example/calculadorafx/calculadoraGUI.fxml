@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculadorafx.Controller">
+   <children>
+      <Button fx:id="btnCalcularDiff" layoutX="484.0" layoutY="463.0" mnemonicParsing="false" text="CALCULAR DIFERENCIA" />
+      <TextField fx:id="txtfUniverso" layoutX="523.0" layoutY="72.0" prefHeight="26.0" prefWidth="269.0" promptText="1,2,3,4,5,6" />
+      <TextField fx:id="txtfConjunto1" layoutX="523.0" layoutY="139.0" prefHeight="26.0" prefWidth="269.0" promptText="A=1,2,3" />
+      <TextField fx:id="txtfConjunto2" layoutX="523.0" layoutY="185.0" prefHeight="26.0" prefWidth="269.0" promptText="B=5,6" />
+      <Button fx:id="btnCalcularIntersec" layoutX="484.0" layoutY="407.0" mnemonicParsing="false" text="CALCULAR INTERSECCCION" />
+      <Button fx:id="btnCalcularComplemento" layoutX="485.0" layoutY="518.0" mnemonicParsing="false" text="CALCULAR COMPLEMENTO" />
+      <Button fx:id="btnCalcularUnion" layoutX="484.0" layoutY="353.0" mnemonicParsing="false" text="CALCULAR UNION" />
+      <TextArea layoutX="24.0" layoutY="119.0" prefHeight="470.0" prefWidth="335.0" text="Instrucciones para ingresar un conjunto:&#10;&#10;Dentro de los cuadros de texto conjuntos, &#10;escriba lo siguiente:&#10;&#10;&quot; A=1,2,3,4,5&quot;&#10;&#10;Para los cuadros de texto de operaciones, escriba:&#10;&quot; A,B &quot; (excepto en el complemento, en el cual&#10; solo se ingresa la letra del conjunto)&#10;&#10;El identificador del conjunto será la letra 'A', &#10;y su elementos serán los numeros del 1 al 5.&#10;&#10;NOTAS: &#10;-Los numeros, letras y palabras son validas&#10;&#10;-Separar unicamente por comas&#10;&#10;-Solo se permiten enteros&#10;&#10;-Los caracteres especiales no son válidos;&#10; eston serán ignorados por el programa&#10;&#10;-No ingrese espacios&#10;&#10;">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="37.0" layoutY="57.0" prefHeight="30.0" prefWidth="335.0" text="OPERACIONES ENTRE CONJUNTOS " textFill="#499c8e">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="421.0" layoutY="73.0" text="UNIVERSO:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="421.0" layoutY="139.0" text="Conjunto 1:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="419.0" layoutY="185.0" text="Conjunto 2:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="421.0" layoutY="232.0" text="Conjunto 3:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtfConjunto3" layoutX="524.0" layoutY="232.0" prefHeight="26.0" prefWidth="269.0" promptText="C=3,4,5" />
+      <Label layoutX="419.0" layoutY="280.0" text="Conjunto 4:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtfConjunto4" layoutX="522.0" layoutY="280.0" prefHeight="26.0" prefWidth="269.0" promptText="D=1,6" />
+      <Button fx:id="btnCalcularComplementoRealtiv" layoutX="484.0" layoutY="573.0" mnemonicParsing="false" text="CALCULAR COMPLEMENTO RELATIVO" />
+      <TextField fx:id="txtfUnion" alignment="CENTER" layoutX="372.0" layoutY="355.0" prefHeight="26.0" prefWidth="92.0" promptText="A,B" />
+      <TextField fx:id="txtfIntersecc" alignment="CENTER" layoutX="372.0" layoutY="409.0" prefHeight="26.0" prefWidth="92.0" promptText="A,B" />
+      <TextField fx:id="txtfDiff" alignment="CENTER" layoutX="372.0" layoutY="465.0" prefHeight="26.0" prefWidth="92.0" promptText="A,B" />
+      <TextField fx:id="txtfComplemento" alignment="CENTER" layoutX="372.0" layoutY="521.0" prefHeight="26.0" prefWidth="92.0" promptText="A" />
+      <TextField fx:id="txtfComplementoRelativ" alignment="CENTER" layoutX="372.0" layoutY="575.0" prefHeight="26.0" prefWidth="92.0" promptText="A,B" />
+      <Label fx:id="labelResultado" alignment="CENTER" layoutX="725.0" layoutY="436.0" prefHeight="42.0" prefWidth="158.0" text="RESULTADO" textFill="#c47070">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

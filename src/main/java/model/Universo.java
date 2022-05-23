@@ -1,5 +1,7 @@
 package model;
 
+import exceptions.SetNotFoundException;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.regex.Pattern;
@@ -81,5 +83,17 @@ public class Universo {
 
     public void sort() {
         Collections.sort(elements);
+    }
+
+    public  Conjunto getConjunto (char c) throws SetNotFoundException{
+
+        for (Conjunto e: listaConjuntos) {
+
+            if (e.getID() == c)
+                return e;
+        }
+
+
+        throw new SetNotFoundException("EL CONJUNTO CON LA LETRA -" + c +"- NO EXISTE");
     }
 }
