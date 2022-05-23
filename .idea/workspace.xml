@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0404100-be63-44b7-81cc-4016fa0c1671" name="Changes" comment="Primer commit -&gt; Lógica de operaciones y restricciones de conjuntos.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/SetNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/calculadorafx/calculadoraGUI.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/calculadorafx/myDemo.fxml" afterDir="false" />
+    <list default="true" id="e0404100-be63-44b7-81cc-4016fa0c1671" name="Changes" comment="Se crea el FXML, se llena el Controller, se crea el Utils">
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/InvalidStringException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/MoreThanTwoSetsException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/calculadorafx/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Conjunto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Conjunto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Operaciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Operaciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Universo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Universo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/calculadorafx/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/calculadorafx/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/calculadorafx/calculadoraGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/calculadorafx/calculadoraGUI.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,12 +77,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.example.calculadorafx.HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.calculadorafx.HelloApplication" />
+    <configuration name="Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.Utils" />
       <module name="CalculadoraFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.calculadorafx.*" />
+          <option name="PATTERN" value="model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,8 +90,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.example.calculadorafx.MyDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.calculadorafx.MyDemo" />
+    <configuration name="com.example.calculadorafx.HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.calculadorafx.HelloApplication" />
       <module name="CalculadoraFX" />
       <extension name="coverage">
         <pattern>
@@ -136,10 +132,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.com.example.calculadorafx.Main" />
+        <item itemvalue="Application.Utils" />
         <item itemvalue="Application.com.example.calculadorafx.HelloApplication" />
         <item itemvalue="Application.model.Test" />
         <item itemvalue="Application.model.Main" />
-        <item itemvalue="Application.com.example.calculadorafx.MyDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +152,7 @@
       <workItem from="1653171538764" duration="11507000" />
       <workItem from="1653230061959" duration="3989000" />
       <workItem from="1653244498697" duration="9493000" />
-      <workItem from="1653259744175" duration="4004000" />
+      <workItem from="1653259744175" duration="18121000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit -&gt; Lógica de operaciones y restricciones de conjuntos.">
       <created>1653191681548</created>
@@ -165,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653191681548</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Se crea el FXML, se llena el Controller, se crea el Utils">
+      <created>1653264036690</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653264036690</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +187,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer commit -&gt; Lógica de operaciones y restricciones de conjuntos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Primer commit -&gt; Lógica de operaciones y restricciones de conjuntos." />
+    <MESSAGE value="Se crea el FXML, se llena el Controller, se crea el Utils" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se crea el FXML, se llena el Controller, se crea el Utils" />
   </component>
 </project>

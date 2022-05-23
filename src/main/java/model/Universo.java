@@ -1,16 +1,21 @@
 package model;
 
+import exceptions.InvalidStringException;
+import exceptions.MoreThanTwoSetsException;
 import exceptions.SetNotFoundException;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.regex.Pattern;
+import java.util.List;
+
+
 
 public class Universo {
 
     ////////////////////////////////////////// ATRIBUTOS  ///////////////////////////////////////////
 
-    private char ID;
+    private char ID = 'U';
     private ArrayList<String> elements;
     private ArrayList<Conjunto> listaConjuntos;
 
@@ -23,9 +28,15 @@ public class Universo {
         this.listaConjuntos = listaConjuntos;
     }
 
-    public Universo(char ID, ArrayList<String> elements) {
-        this.ID = ID;
+    public Universo(ArrayList<String> elements) {
         this.elements = elements;
+        this.listaConjuntos = new ArrayList<>();
+    }
+
+    public Universo (String str){
+        String[] s = str.split(",");
+        this.elements = new ArrayList<>(List.of(s));
+        this.listaConjuntos = new ArrayList<>();
     }
 
     public Universo(char ID) {
@@ -92,8 +103,25 @@ public class Universo {
             if (e.getID() == c)
                 return e;
         }
-
-
         throw new SetNotFoundException("EL CONJUNTO CON LA LETRA -" + c +"- NO EXISTE");
+    }
+
+    public Conjunto[] getParConjuntos (String str) throws  Exception {
+
+        if(str.length()>=4)
+            throw new MoreThanTwoSetsException("No pueden haber más de 3 caracteres dentro del cuadro de texto de operación");
+
+        if(str.length()<=2){
+            throw new InvalidStringException ("Hay dos o menos caracteres dentro de la operación.");
+        }
+
+        if(str.charAt(1)!=',')
+            throw new InvalidStringException ("Los conjuntos han de estar separados una coma");
+
+        Conjunto[] list = new Conjunto[2];
+        list[0]=getConjunto(str.charAt(0));
+        list[1]=getConjunto(str.charAt(2));
+
+        return list;
     }
 }

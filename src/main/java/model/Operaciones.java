@@ -89,7 +89,7 @@ public class Operaciones {
         return intersec;
     }
 
-    public static ArrayList getComplement (Conjunto c){
+    public static ArrayList<String> getComplement (Conjunto c){
 
         ArrayList<String> list = new ArrayList<>();
 

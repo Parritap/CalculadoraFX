@@ -1,8 +1,26 @@
 package model;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.regex.Pattern;
 
 public class Utils {
+
+    public static void main(String[] args) {
+        String n = null;
+        String str = "1,2,3,4,5";
+
+        String[] strArray = str.split(",");
+
+       // System.out.println(Arrays.toString(strArray));
+        ArrayList<String> list = new ArrayList<>(List.of(strArray));
+        //System.out.println(List.of(strArray));
+
+        String x = String.join(", ", strArray);
+        System.out.println(x);
+    }
 
     /**
      * Método que corta un String cuando encuentre una coma, y mete todos los elementos
@@ -36,7 +54,8 @@ public class Utils {
         return intArray;
     }
 
-    public static int [][] dividirMatrizPorEsp (String str){
+
+    public static int[][] dividirStringPorEspacios(String str) {
 
         String[] strArray = str.split(" ");
         int[][] matrix = new int[strArray.length][];
@@ -59,7 +78,7 @@ public class Utils {
         return array;
     }
 
-    public static int [ ]removerDuplicados(int[] array){
+    public static int[] removerDuplicados(int[] array) {
         ArrayList<Integer> list = new ArrayList<>();
 
         for (int element : array) {
@@ -67,6 +86,29 @@ public class Utils {
                 list.add(element);
         }
         return toIntArray(list);
+    }
+
+    public static ArrayList<String> cleanElements(ArrayList<String> list) {
+
+        ArrayList<String> newList = new ArrayList<>(list);
+
+        for (int i = 0; i < newList.size(); i++) {
+            String aux = list.get(i);
+
+            if (!validElement(aux)) {
+                list.remove(i);
+                i--;
+            }
+        }
+        return newList;
+    }
+
+    private static boolean validElement(String e) {
+        return (Pattern.matches("\\d*", e) || Pattern.matches("\\w*", e));
+    }
+
+    public static String toString(ArrayList<String> list){
+        return String.join(", ", list);
     }
 
 

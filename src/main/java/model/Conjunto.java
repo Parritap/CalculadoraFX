@@ -61,6 +61,15 @@ public class Conjunto {
         sort();
     }
 
+    public Conjunto (String str, Universo universe){
+        String [] s = str.split("="); //Divide la letra y los elementos separados por comas
+
+        this.ID = s[0].charAt(0);
+        String[] elementos= s[1].split(","); //Crea un arreglo con base a los elementos separados por comas
+        this.elements = new ArrayList<>(List.of(elementos));
+        this.universe = universe;
+    }
+
     /**
      * Este constructor añade el Identificador al conjunto y crea una instancia de la
      * lista @elementos cosa que esta no sea nula.
